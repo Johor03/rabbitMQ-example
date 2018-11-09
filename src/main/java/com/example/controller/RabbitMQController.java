@@ -1,5 +1,9 @@
-package com.example;
+package com.example.controller;
 
+import com.example.User;
+import com.example.delayexchange.DelayExchangeMessage;
+import com.example.delayplugin.DelayPluginMessage;
+import com.example.normal.NormalMQ;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +17,7 @@ import java.util.Date;
 public class RabbitMQController {
 
     @Autowired
-    private SenderMQ sender;
+    private NormalMQ sender;
 
     @Autowired
     private DelayPluginMessage delayConsumer;

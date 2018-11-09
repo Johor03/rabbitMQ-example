@@ -1,5 +1,6 @@
-package com.example;
+package com.example.delayexchange;
 
+import com.example.User;
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageDeliveryMode;

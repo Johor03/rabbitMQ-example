@@ -1,5 +1,7 @@
-package com.example;
+package com.example.normal;
 
+import com.example.config.RabbitMqConfig;
+import com.example.User;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -11,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 
 @Component
-public class SenderMQ {
+public class NormalMQ {
 
     @Autowired
     private RabbitTemplate rabbitTemplate;

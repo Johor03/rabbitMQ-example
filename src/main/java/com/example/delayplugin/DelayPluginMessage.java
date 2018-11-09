@@ -1,5 +1,7 @@
-package com.example;
+package com.example.delayplugin;
 
+import com.example.config.RabbitMqConfig;
+import com.example.User;
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageDeliveryMode;
@@ -23,7 +25,7 @@ public class DelayPluginMessage {
 
     @RabbitHandler
     @RabbitListener(queues = RabbitMqConfig.Delay_Notify_Queue_Name)
-    public void process(@Payload User data,Message message, Channel channel) throws IOException {
+    public void process(@Payload User data, Message message, Channel channel) throws IOException {
         try {
             System.out.println("开始执行延时消息处理......"+ data);
             //int i = 1/0;
